@@ -1,0 +1,24 @@
+{
+  "name": "after-hook",
+  "version": "0.0.0",
+  "description": "provide wrap function for function callback hook",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josudoey/after-hook.git"
+  },
+  "keywords": [
+    "wrap",
+    "callback",
+    "wrap"
+  ],
+  "author": "Joey Fang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josudoey/after-hook/issues"
+  },
+  "homepage": "https://github.com/josudoey/after-hook#readme"
+}
