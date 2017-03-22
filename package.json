@@ -13,12 +13,19 @@
   "keywords": [
     "wrap",
     "callback",
-    "wrap"
+    "function",
+    "hook"
   ],
   "author": "Joey Fang",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/josudoey/after-hook/issues"
   },
-  "homepage": "https://github.com/josudoey/after-hook#readme"
+  "homepage": "https://github.com/josudoey/after-hook#readme",
+  "devDependencies": {
+    "after": "^0.8.2",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
+    "sinon": "^2.1.0"
+  }
 }

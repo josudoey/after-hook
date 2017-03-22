@@ -6,15 +6,9 @@ module.exports = function (func, hook) {
     throw new TypeError('"hook" argument must be a function');
   }
 
-  var resolve = function (result) {
+  var next = function (err, result, args) {
     setTimeout(function () {
-      hook(null, result);
-    }, 0);
-  };
-
-  var reject = function (err) {
-    setTimeout(function () {
-      hook(err);
+      hook(err, result, args);
     }, 0);
   };
 
@@ -23,13 +17,17 @@ module.exports = function (func, hook) {
     try {
       var r = func.apply(null, args);
       if (!r || !r.then) {
-        resolve(r);
+        next(null, r, args);
         return r;
       }
-      r.then(resolve).catch(reject);
+      r.then(function (result) {
+        next(null, result, args);
+      }).catch(function (err) {
+        next(err, undefined, args);
+      });
       return r;
     } catch (err) {
-      reject(err);
+      next(err, undefined, args);
       throw err;
     }
   };
