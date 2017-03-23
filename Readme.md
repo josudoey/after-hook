@@ -16,4 +16,6 @@ $ npm install --save after-hook
 
 Return a wrap function, the hook function will call after func called.
 
-### afterHook(func, hook)
+### afterHook(func, hook[, args])
+
+## hook(err, returns, args)
